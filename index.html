@@ -2,17 +2,17 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Librería El Rincón de los Libros</title>
 
     <link rel="stylesheet" href="assets/style.css">
 </head>
 
-<body>
+    <link rel="stylesheet" href="assets/style.css">
 
-    <!-- ENCABEZADO -->
     <header>
-        <h1>📚 El Rincón de los Libros</h1>
+
+            <h1>📚 El Rincón de los Libros</h1>
 
         <nav>
             <a href="#inicio">Inicio</a>
@@ -20,8 +20,16 @@
             <a href="#registro">Registro</a>
             <a href="#contacto">Contacto</a>
         </nav>
-    </header>
 
+    <button onclick="mostrarCarrito()" class="carrito">
+        🛒 Carrito
+        (<span id="contador-carrito">0</span>)
+    </button>
+
+</header>
+</head>
+
+<body>
 
     <!-- INICIO -->
     <section id="inicio">
@@ -199,6 +207,8 @@
     <footer>
         <p>&copy; 2026 El Rincón de los Libros. Todos los derechos reservados.</p>
     </footer>
+
+    <script src="assets/script.js"></script>
 
 </body>
 </html>
