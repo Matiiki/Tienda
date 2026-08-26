@@ -1,0 +1,441 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5efe6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+header {
+    background-color: #3e2723;
+    color: white;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-family: Georgia, serif;
+    font-size: 27px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #d7a35d;
+}
+
+/* =========================
+   INICIO
+========================= */
+
+#inicio {
+    min-height: 85vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(62, 39, 35, 0.75),
+            rgba(62, 39, 35, 0.75)
+        ),
+        url("https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.inicio-contenido {
+    max-width: 750px;
+    padding: 30px;
+}
+
+.inicio-contenido h2 {
+    font-family: Georgia, serif;
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.inicio-contenido p {
+    font-size: 21px;
+    margin-bottom: 30px;
+}
+
+/* =========================
+   BOTONES
+========================= */
+
+.boton {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    background-color: #b87935;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+
+    transition: all 0.3s;
+}
+
+.boton:hover {
+    background-color: #8f5824;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   SECCIONES
+========================= */
+
+section {
+    padding: 80px 8%;
+}
+
+section h2 {
+    text-align: center;
+
+    font-family: Georgia, serif;
+
+    font-size: 38px;
+
+    color: #3e2723;
+
+    margin-bottom: 45px;
+}
+
+/* =========================
+   PRODUCTOS
+========================= */
+
+.productos {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(230px, 1fr));
+
+    gap: 30px;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+.producto {
+    background-color: white;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.12);
+
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+}
+
+.producto:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.producto img {
+    width: 100%;
+    height: 300px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.producto-info {
+    padding: 22px;
+
+    text-align: center;
+}
+
+.producto-info h3 {
+    font-family: Georgia, serif;
+
+    font-size: 22px;
+
+    color: #3e2723;
+
+    margin-bottom: 8px;
+}
+
+.producto-info p {
+    color: #777;
+
+    margin-bottom: 12px;
+}
+
+.precio {
+    display: block;
+
+    color: #b87935;
+
+    font-size: 21px;
+
+    font-weight: bold;
+
+    margin-bottom: 18px;
+}
+
+/* =========================
+   FORMULARIOS
+========================= */
+
+.formulario {
+    width: 100%;
+    max-width: 600px;
+
+    margin: auto;
+
+    background-color: white;
+
+    padding: 35px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+
+    color: #3e2723;
+
+    font-weight: bold;
+
+    margin-bottom: 7px;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+
+    font-family: Arial, sans-serif;
+
+    outline: none;
+
+    transition: border 0.3s;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    border-color: #b87935;
+
+    box-shadow:
+        0 0 5px rgba(184, 121, 53, 0.3);
+}
+
+.campo textarea {
+    height: 140px;
+
+    resize: vertical;
+}
+
+.formulario button {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background-color: #3e2723;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s;
+}
+
+.formulario button:hover {
+    background-color: #5d4037;
+}
+
+/* =========================
+   CONTACTO
+========================= */
+
+#contacto {
+    background-color: #eee3d3;
+}
+
+.contacto-info {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.contacto-info p {
+    margin: 8px;
+
+    font-size: 18px;
+
+    color: #4d403a;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: #3e2723;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 23px;
+        text-align: center;
+    }
+
+    nav {
+        gap: 12px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .inicio-contenido h2 {
+        font-size: 38px;
+    }
+
+    .inicio-contenido p {
+        font-size: 18px;
+    }
+
+    section {
+        padding: 60px 5%;
+    }
+
+    section h2 {
+        font-size: 32px;
+    }
+
+    .formulario {
+        padding: 25px;
+    }
+}
+
+/* =========================
+   CELULARES PEQUEÑOS
+========================= */
+
+@media (max-width: 480px) {
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    nav {
+        gap: 8px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .inicio-contenido h2 {
+        font-size: 32px;
+    }
+
+    .inicio-contenido p {
+        font-size: 16px;
+    }
+
+    .producto img {
+        height: 260px;
+    }
+}

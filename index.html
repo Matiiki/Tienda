@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librería El Rincón de los Libros</title>
+
+    <style>
+        <link rel="stylesheet" href="assets/style.css">
+    </style>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <h1>📚 El Rincón de los Libros</h1>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#productos">Productos</a>
+            <a href="#registro">Registro</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+
+    <!-- INICIO -->
+    <section id="inicio">
+        <div class="inicio-contenido">
+            <h2>Encuentra tu próxima historia</h2>
+
+            <p>
+                Descubre novelas, clásicos, ciencia ficción, fantasía
+                y mucho más en nuestra librería.
+            </p>
+
+            <a href="#productos" class="boton">Ver libros</a>
+        </div>
+    </section>
+
+
+    <!-- PRODUCTOS -->
+    <section id="productos">
+        <h2>Nuestros libros</h2>
+
+        <div class="productos">
+
+            <div class="producto">
+                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=600&q=80"
+                     alt="Libro de fantasía">
+
+                <div class="producto-info">
+                    <h3>El Reino Perdido</h3>
+                    <p>Novela de fantasía</p>
+                    <span class="precio">$15.990</span>
+                    <a href="#" class="boton">Comprar</a>
+                </div>
+            </div>
+
+
+            <div class="producto">
+                <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80"
+                     alt="Libro abierto">
+
+                <div class="producto-info">
+                    <h3>Historias del Tiempo</h3>
+                    <p>Ciencia ficción</p>
+                    <span class="precio">$18.990</span>
+                    <a href="#" class="boton">Comprar</a>
+                </div>
+            </div>
+
+
+            <div class="producto">
+                <img src="https://images.unsplash.com/photo-1511108690759-009324a90311?auto=format&fit=crop&w=600&q=80"
+                     alt="Libro clásico">
+
+                <div class="producto-info">
+                    <h3>Grandes Clásicos</h3>
+                    <p>Literatura clásica</p>
+                    <span class="precio">$12.990</span>
+                    <a href="#" class="boton">Comprar</a>
+                </div>
+            </div>
+
+
+            <div class="producto">
+                <img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=600&q=80"
+                     alt="Libros sobre una mesa">
+
+                <div class="producto-info">
+                    <h3>El Misterio de la Noche</h3>
+                    <p>Novela policial</p>
+                    <span class="precio">$14.990</span>
+                    <a href="#" class="boton">Comprar</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- REGISTRO -->
+    <section id="registro">
+        <h2>Crear una cuenta</h2>
+
+        <form class="formulario">
+
+            <div class="campo">
+                <label for="nombre">Nombre completo</label>
+                <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    placeholder="Ingresa tu nombre"
+                    required>
+            </div>
+
+            <div class="campo">
+                <label for="email">Correo electrónico</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="ejemplo@correo.com"
+                    required>
+            </div>
+
+            <div class="campo">
+                <label for="password">Contraseña</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Crea una contraseña"
+                    required>
+            </div>
+
+            <div class="campo">
+                <label for="confirmar">Confirmar contraseña</label>
+                <input
+                    type="password"
+                    id="confirmar"
+                    name="confirmar"
+                    placeholder="Repite tu contraseña"
+                    required>
+            </div>
+
+            <button type="submit">Registrarme</button>
+
+        </form>
+    </section>
+
+
+    <!-- CONTACTO -->
+    <section id="contacto">
+        <h2>Contáctanos</h2>
+
+        <div class="contacto-info">
+            <p>📍 Santiago, Chile</p>
+            <p>📞 +56 9 1234 5678</p>
+            <p>✉️ contacto@rincondeloslibros.cl</p>
+        </div>
+
+        <form class="formulario">
+
+            <div class="campo">
+                <label for="nombre-contacto">Nombre</label>
+                <input
+                    type="text"
+                    id="nombre-contacto"
+                    placeholder="Tu nombre"
+                    required>
+            </div>
+
+            <div class="campo">
+                <label for="email-contacto">Correo electrónico</label>
+                <input
+                    type="email"
+                    id="email-contacto"
+                    placeholder="Tu correo"
+                    required>
+            </div>
+
+            <div class="campo">
+                <label for="mensaje">Mensaje</label>
+                <textarea
+                    id="mensaje"
+                    placeholder="Escribe tu mensaje..."
+                    required></textarea>
+            </div>
+
+            <button type="submit">Enviar mensaje</button>
+
+        </form>
+    </section>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>&copy; 2026 El Rincón de los Libros. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
