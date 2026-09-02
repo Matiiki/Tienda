@@ -214,6 +214,31 @@ if (formularioRegistro) {
             document.getElementById("confirmar").value;
 
 
+        // Validar correo electrónico
+        const dominiosPermitidos = [
+            "gmail.com",
+            "hotmail.com",
+            "outlook.com",
+            "yahoo.com",
+            "icloud.com",
+            "live.com",
+            "proton.me",
+            "protonmail.com"
+        ];
+
+        const partesEmail = email.toLowerCase().split("@");
+
+        if (
+            partesEmail.length !== 2 ||
+            partesEmail[0].length === 0 ||
+            !dominiosPermitidos.includes(partesEmail[1])
+        ) {
+            alert("❌ Ingresa un correo válido. Ejemplos: usuario@gmail.com, usuario@hotmail.com");
+            return;
+        }
+
+        
+
         // Validar contraseña
         if (password !== confirmar) {
 
