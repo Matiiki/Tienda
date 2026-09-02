@@ -47,29 +47,144 @@ function actualizarCarrito() {
 // Mostrar el contenido del carrito
 function mostrarCarrito() {
 
+    document
+        .getElementById("panel-carrito")
+        .classList.add("activo");
+
+    document
+        .getElementById("fondo-carrito")
+        .classList.add("activo");
+
+    mostrarProductosCarrito();
+}
+
+function cerrarCarrito() {
+
+    document
+        .getElementById("panel-carrito")
+        .classList.remove("activo");
+
+    document
+        .getElementById("fondo-carrito")
+        .classList.remove("activo");
+}
+function mostrarProductosCarrito() {
+
+    const contenedor =
+        document.getElementById("productos-carrito");
+
+    const totalElemento =
+        document.getElementById("total-carrito");
+
+    contenedor.innerHTML = "";
+
+    let total = 0;
+
+
     if (carrito.length === 0) {
-        alert("Tu carrito está vacío.");
+
+        contenedor.innerHTML = `
+            <p class="carrito-vacio">
+                Tu carrito está vacío 📚
+            </p>
+        `;
+
+        totalElemento.textContent = "$0";
+
         return;
     }
 
-    let mensaje = "🛒 TU CARRITO\n\n";
-    let total = 0;
 
-    carrito.forEach(producto => {
+    carrito.forEach(function(producto, indice) {
 
-        const subtotal = producto.precio * producto.cantidad;
-
-        mensaje += `${producto.nombre}\n`;
-        mensaje += `Cantidad: ${producto.cantidad}\n`;
-        mensaje += `Subtotal: $${subtotal.toLocaleString("es-CL")}\n\n`;
+        const subtotal =
+            producto.precio * producto.cantidad;
 
         total += subtotal;
+
+
+        const item =
+            document.createElement("div");
+
+        item.classList.add("item-carrito");
+
+
+        item.innerHTML = `
+
+            <h3>${producto.nombre}</h3>
+
+            <p class="item-carrito-precio">
+                $${producto.precio.toLocaleString("es-CL")}
+            </p>
+
+            <div class="controles-cantidad">
+
+                <button onclick="disminuirCantidad(${indice})">
+                    -
+                </button>
+
+                <span>
+                    ${producto.cantidad}
+                </span>
+
+                <button onclick="aumentarCantidad(${indice})">
+                    +
+                </button>
+
+            </div>
+
+            <button
+                class="eliminar-producto"
+                onclick="eliminarProducto(${indice})">
+
+                🗑️ Eliminar
+
+            </button>
+
+        `;
+
+
+        contenedor.appendChild(item);
+
     });
 
-    mensaje += "----------------------\n";
-    mensaje += `TOTAL: $${total.toLocaleString("es-CL")}`;
 
-    alert(mensaje);
+    totalElemento.textContent =
+        "$" + total.toLocaleString("es-CL");
+}
+function aumentarCantidad(indice) {
+
+    carrito[indice].cantidad++;
+
+    actualizarCarrito();
+
+    mostrarProductosCarrito();
+}
+
+
+function disminuirCantidad(indice) {
+
+    carrito[indice].cantidad--;
+
+    if (carrito[indice].cantidad <= 0) {
+
+        carrito.splice(indice, 1);
+
+    }
+
+    actualizarCarrito();
+
+    mostrarProductosCarrito();
+}
+
+
+function eliminarProducto(indice) {
+
+    carrito.splice(indice, 1);
+
+    actualizarCarrito();
+
+    mostrarProductosCarrito();
 }
 
 

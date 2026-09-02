@@ -207,7 +207,40 @@
     <footer>
         <p>&copy; 2026 El Rincón de los Libros. Todos los derechos reservados.</p>
     </footer>
+    <!-- FONDO OSCURO DEL CARRITO -->
+<div id="fondo-carrito" class="fondo-carrito" onclick="cerrarCarrito()"></div>
 
+<!-- CARRITO LATERAL -->
+<div id="panel-carrito" class="panel-carrito">
+
+    <div class="carrito-header">
+        <h2>🛒 Mi carrito</h2>
+
+        <button onclick="cerrarCarrito()" class="cerrar-carrito">
+            ✕
+        </button>
+    </div>
+
+    <div id="productos-carrito" class="productos-carrito">
+        <p class="carrito-vacio">
+            Tu carrito está vacío 📚
+        </p>
+    </div>
+
+    <div class="carrito-footer">
+
+        <div class="total-carrito">
+            <span>Total</span>
+            <span id="total-carrito">$0</span>
+        </div>
+
+        <button class="boton-comprar-carrito">
+            Finalizar compra
+        </button>
+
+    </div>
+
+</div>    
     <script src="assets/script.js"></script>
 
 </body>
